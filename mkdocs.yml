@@ -1,0 +1,14 @@
+site_name: ParentText Crisis Test
+site_url: https://mydomain.org/parenttext-crisis-test
+# theme:
+#   name: material
+
+# To preserve the folder structure for imports, we try to not use a nav section and instead include all naming in file metadata and folder structure.
+# nav:
+
+draft_docs:
+  _unpublished.md       # Any md file ending in _unpublished.md
+
+markdown_extensions:
+  - toc:
+      permalink: "#"

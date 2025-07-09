@@ -1,13 +1,15 @@
 site_name: ParentText Crisis Test
 site_url: https://mydomain.org/parenttext-crisis-test
-# theme:
-#   name: material
+theme:
+  name: material
 
 nav:
   - index.md
   - introduction.md
   - deployment_guide.md
-  - parenttext-pipeline/docs/configuration.md
+  # - parenttext-pipeline/configuration.md # If both this and !import are used, it fails
+  # - Dependency Docs: 
+  #   - ParentText Pipeline: '!import https://github.com/GabeBolton/parenttext-pipeline?branch=main'
   - ParentText Pipeline: '!import https://github.com/GabeBolton/parenttext-pipeline?branch=main'
   # - ParentText Pipeline: parenttext-pipeline/docs/index.md
 
@@ -25,8 +27,8 @@ plugins:
       # if set the docs directory will not be removed when importing docs.
       # When using this with a nav section in an imported repo you must keep the
       # docs directory in the path (e.g., docs/path/to/file.md).
-      keep_docs_dir: true
-      nav_repos:
-        - name: parenttext-pipeline
-          import_url: https://github.com/GabeBolton/parenttext-pipeline?branch=main
-          imports: [docs/*]
+      keep_docs_dir: false
+      # nav_repos: # If both this and !import are used, it fails
+      #   - name: parenttext-pipeline
+      #     import_url: https://github.com/GabeBolton/parenttext-pipeline?branch=main
+      #     imports: [docs/*]
